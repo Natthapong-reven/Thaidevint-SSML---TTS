@@ -121,3 +121,14 @@ View your app in AI Studio: https://ai.studio/apps/drive/1pG7EB7VGaGfNHiJUD-RXy1
 - **Language Support:** Sanskrit, Hindi, Marathi, Nepali  
 
 ---
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+
+Copyright (c) 2025 Natthapong Revensup
+
+This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+You may not use this work for commercial purposes. You must give appropriate credit, provide a link to the license,
+and indicate if changes were made. If you remix, transform, or build upon the material, you must distribute your
+contributions under the same license as the original.
+
+To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/
+
