@@ -369,7 +369,15 @@ function App() {
           >
             Thaidevint
           </a>
-          . All rights reserved.
+          . All rights reserved. Licensed under{' '}
+          <a
+            href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-cyan-500 transition-colors hover:text-cyan-400 hover:underline"
+          >
+            CC BY-NC-SA 4.0
+          </a>.
         </p>
         <button onClick={() => setIsReleaseNotesOpen(true)} className="mt-2 inline-flex items-center text-cyan-400 hover:underline">
             <InfoIcon className="mr-1 h-4 w-4" />
