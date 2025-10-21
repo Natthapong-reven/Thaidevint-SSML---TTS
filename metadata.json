@@ -1,5 +1,6 @@
 {
-  "name": "Thaidevint SSML & TTS",
-  "description": "An advanced tool to convert Devanagari script with IAST transliteration into a valid SSML (Speech Synthesis Markup Language) script. It leverages the Gemini API for both the conversion and for generating high-quality text-to-speech audio from the resulting SSML.",
+  "name": "SSML & TTS Generate",
+  "version": "2.0.0",
+  "description": "A stable and feature-complete tool to convert text into a valid SSML (Speech Synthesis Markup Language) script. It leverages the Gemini API for advanced conversion and high-quality text-to-speech audio generation.",
   "requestFramePermissions": []
 }

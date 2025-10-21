@@ -1,4 +1,4 @@
-import { GoogleGenAI, Modality } from "@google/genai";
+import { GoogleGenAI, Modality, Type } from "@google/genai";
 
 /**
  * Creates and returns a new GoogleGenAI client instance.
@@ -174,41 +174,42 @@ export const generateSpeech = async (text: string, voiceName: string): Promise<s
   }
 };
 
+// FIX: Use the 'Type' enum for schema definition as per the guidelines.
 const researchResponseSchema = {
-    type: 'OBJECT',
+    type: Type.OBJECT,
     properties: {
         guidance: {
-            type: 'STRING',
+            type: Type.STRING,
             description: "A multi-line string with detailed pronunciation and rhythm instructions.",
         },
         voiceProfile: {
-            type: 'OBJECT',
+            type: Type.OBJECT,
             properties: {
-                sex: { type: 'STRING', description: "The speaker's gender. Must be 'Male' or 'Female'." },
-                age: { type: 'STRING', description: "The speaker's age category. Must be one of: 'Child', 'Adult', 'Senior'." },
-                occupation: { type: 'STRING', description: "e.g., Priest, Scholar, Storyteller" },
+                sex: { type: Type.STRING, description: "The speaker's gender. Must be 'Male' or 'Female'." },
+                age: { type: Type.STRING, description: "The speaker's age category. Must be one of: 'Child', 'Adult', 'Senior'." },
+                occupation: { type: Type.STRING, description: "e.g., Priest, Scholar, Storyteller" },
             },
             required: ["sex", "age", "occupation"],
         },
         recommendedVoice: {
-            type: 'STRING',
+            type: Type.STRING,
             description: "The single best voice name from the provided list of available voices.",
         },
         recommendedVocalExpression: {
-            type: 'STRING',
+            type: Type.STRING,
             description: "The single best vocal expression from the list: ['Speech', 'Chant', 'Recitation']",
         },
         recommendedTone: {
-            type: 'STRING',
+            type: Type.STRING,
             description: "The single best tone/prosody from the list: ['Standard', 'Age-appropriate', 'Stylish', 'Calm', 'Meditative', 'Reverent', 'Relaxed', 'Energetic', 'Motivational']",
         },
         reasoning: {
-            type: 'OBJECT',
+            type: Type.OBJECT,
             description: "An explanation for why the recommendations were made.",
             properties: {
-                voice: { type: 'STRING', description: "Why the recommended voice is a good fit." },
-                expression: { type: 'STRING', description: "Why the recommended vocal expression is suitable." },
-                tone: { type: 'STRING', description: "Why the recommended tone is appropriate." },
+                voice: { type: Type.STRING, description: "Why the recommended voice is a good fit." },
+                expression: { type: Type.STRING, description: "Why the recommended vocal expression is suitable." },
+                tone: { type: Type.STRING, description: "Why the recommended tone is appropriate." },
             },
             required: ["voice", "expression", "tone"],
         }
